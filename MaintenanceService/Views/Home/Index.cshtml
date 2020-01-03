@@ -1,0 +1,11 @@
+﻿@model MaintenanceService.Models.HomeViewModel
+
+<h2>Welcome to Maintenance Service</h2>
+<h3>Choose date:</h3>
+
+@foreach(var date in Model.CurrentWeek)
+{
+    <div>
+        @Html.ActionLink(date.ToShortDateString(), "TimesForDay", new { date = date })
+    </div>
+}

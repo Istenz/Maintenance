@@ -1,0 +1,27 @@
+﻿@model MaintenanceService.Models.ReservationViewModel
+
+<h2>Reservation</h2>
+
+@using (Html.BeginForm("Reservation", "Home", FormMethod.Post))
+{
+    <input name="reservationId" type="number" value="@Model.Reservation.Id" hidden />
+    <div>
+        <label>Car Brand:</label>
+        <input name="Brand" type="text" />
+
+        <label>Car Model:</label>
+        <input name="Model" type="text" />
+
+        <label>Car Version:</label>
+        <input name="Version" type="text" />
+
+        <label>Your name:</label>
+        <input name="Name" type="text" />
+
+        <label>Your surname:</label>
+        <input name="Surname" type="text" />
+
+    </div>
+    <div><input type="submit" value="Submit" /></div>
+}
+

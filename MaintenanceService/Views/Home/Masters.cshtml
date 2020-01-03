@@ -1,0 +1,7 @@
+﻿@model MaintenanceService.Models.ChooseMasterViewModel
+
+<h3>Choose master:</h3>
+@foreach(var master in Model.Masters)
+{
+    <div>@Html.ActionLink($"{master.Name} {master.Surname}", "ChooseMaster", new {masterId = master.Id, maintenanceId = Model.MaintenanceId })</div>
+}

@@ -1,0 +1,18 @@
+﻿@model MaintenanceService.Models.TimesForDayViewModel
+
+<h2>Choose time:</h2>
+
+@foreach(var time in Model.IsReservedTimes)
+{
+    <div>
+        @if(time.Value == true)
+        {
+            @time.Key.ToShortTimeString()
+        }
+        else
+        {
+            @Html.ActionLink($"{time.Key.ToShortTimeString()}", "Reservation", new { dateTime = time.Key })
+        }
+    </div>
+}
+
